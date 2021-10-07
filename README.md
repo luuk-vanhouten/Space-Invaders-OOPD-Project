@@ -1,11 +1,8 @@
-# Yaeger tutorial: Creating Waterworld
+# Sapce Invaders
 
-This repository contains a tutorial in which you will create a simple game called Waterworld. We start of with an empty
-project that does not contain any code. Only the assets and the project settings are provided. Step-by-step you will be
-guided in the creation of simple game, and in doing so, become familiar with many of the features of Yaeger.
+A small game created for a school project. It's loosely based on the game Space Invaders, but it has more in common with typical "shoot 'em up" games from a top-down perspective.
 
-![Waterworld](docs/images/game/game.png)
 
-[Dive into the tutorial](https://han-yaeger.github.io/yaeger-tutorial/)
+
 
 
