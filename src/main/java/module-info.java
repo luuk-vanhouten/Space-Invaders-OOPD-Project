@@ -1,5 +1,6 @@
 module waterworld {
     requires hanyaeger;
+    requires com.google.guice;
 
     exports com.github.hanyaeger.tutorial;
 
