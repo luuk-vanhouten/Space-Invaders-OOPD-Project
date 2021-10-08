@@ -1,14 +1,14 @@
 [book]
-authors = ["Meron Brouwer"]
-description = "A tutorial for Waterworld, a simple game based on Yaeger "
+authors = ["Luuk van Houten"]
+description = "A game called Space Invaders, loosely based on the original."
 language = "en"
 multilingual = false
 src = "docs"
-title = "Yaeger Tutorial - Creating Waterworld"
+title = "Space Invaders"
 
 [build]
 build-dir = "target/docs"
 create-missing = false
 
 [output.html]
-git-repository-url = "https://github.com/han-yaeger/yaeger-tutorial"
+git-repository-url = "https://github.com/luuk-vanhouten/Space-Invaders-OOPD-Project"
