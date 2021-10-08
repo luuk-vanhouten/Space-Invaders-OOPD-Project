@@ -1,8 +1,9 @@
-package com.github.hanyaeger.tutorial;
+package com.github.hanyaeger.tutorial.scenes;
 
 import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.scenes.StaticScene;
+import com.github.hanyaeger.tutorial.SpaceInvaders;
 import com.github.hanyaeger.tutorial.entities.buttons.EndButton;
 import com.github.hanyaeger.tutorial.entities.buttons.PlayAgainButton;
 

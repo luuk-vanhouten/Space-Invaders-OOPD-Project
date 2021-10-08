@@ -1,4 +1,4 @@
-package com.github.hanyaeger.tutorial;
+package com.github.hanyaeger.tutorial.scenes;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.EntitySpawnerContainer;
@@ -16,7 +16,7 @@ public class GameLevel extends DynamicScene implements EntitySpawnerContainer {
 
     @Override
     public void setupEntitySpawners() {
-        addEntitySpawner(new StarSpawner(getWidth()));
+//        addEntitySpawner(new StarSpawner(getWidth()));
     }
 
     @Override

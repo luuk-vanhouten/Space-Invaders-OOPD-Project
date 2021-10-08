@@ -16,7 +16,7 @@ public class StarSpawner extends EntitySpawner {
 
     @Override
     protected void spawnEntities() {
-        spawn(new Star(randomLocation(), 20));
+        spawn(new Star(randomLocation(), 25));
     }
 
     private Coordinate2D randomLocation() {

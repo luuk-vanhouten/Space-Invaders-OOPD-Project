@@ -2,6 +2,10 @@ package com.github.hanyaeger.tutorial;
 
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.YaegerGame;
+import com.github.hanyaeger.tutorial.scenes.EndScene;
+import com.github.hanyaeger.tutorial.scenes.GameLevel;
+import com.github.hanyaeger.tutorial.scenes.LevelSelectorScene;
+import com.github.hanyaeger.tutorial.scenes.TitleScene;
 
 public class SpaceInvaders extends YaegerGame {
 
