@@ -19,10 +19,8 @@ public class Star extends DynamicEllipseEntity implements SceneBorderCrossingWat
 
     @Override
     public void notifyBoundaryCrossing(SceneBorder sceneBorder) {
-        switch(sceneBorder) {
-            case BOTTOM:
-                remove();
-                break;
+        if (sceneBorder == SceneBorder.BOTTOM) {
+            remove();
         }
     }
 }
