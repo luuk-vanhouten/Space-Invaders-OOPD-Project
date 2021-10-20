@@ -12,6 +12,6 @@ public class EnemyScout extends Enemy{
 
     @Override
     public void doDamage(Player player) {
-        player.setHealthPoints(player.getHealthPoints() - 1);
+        player.setHealthPoints(player.getHealthPoints() - 2);
     }
 }
