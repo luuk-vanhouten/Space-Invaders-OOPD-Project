@@ -19,7 +19,7 @@ public class StartButton extends TextEntity implements MouseButtonPressedListene
     public StartButton(Coordinate2D initialLocation, SpaceInvaders spaceInvaders){
         super(initialLocation,"Play game");
         setFill(Color.BLUEVIOLET);
-        setFont(Font.font("Roboto", FontWeight.BOLD, 30));
+        setFont(Font.font("Roboto", FontWeight.BOLD, 40));
         this.spaceInvaders = spaceInvaders;
     }
 

@@ -23,6 +23,8 @@ public class LevelSelectorScene extends StaticScene {
     @Override
     public void setupScene() {
         setBackgroundImage("backgrounds/background3.jpg");
+        setBackgroundAudio("audio/backgroundmusic1.mp3");
+        setBackgroundAudioVolume(0.5);
     }
 
     @Override

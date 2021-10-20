@@ -19,13 +19,13 @@ public class PlayAgainButton extends TextEntity implements MouseButtonPressedLis
     public PlayAgainButton(Coordinate2D initialLocation, SpaceInvaders spaceInvaders){
         super(initialLocation,"Play Again");
         setFill(Color.BLUEVIOLET);
-        setFont(Font.font("Roboto", FontWeight.BOLD, 40));
+        setFont(Font.font("Roboto", FontWeight.BOLD, 30));
         this.spaceInvaders = spaceInvaders;
     }
 
     @Override
     public void onMouseButtonPressed(MouseButton mouseButton, Coordinate2D coordinate2D) {
-        spaceInvaders.setActiveScene(2);
+        spaceInvaders.setActiveScene(1);
     }
 
     @Override

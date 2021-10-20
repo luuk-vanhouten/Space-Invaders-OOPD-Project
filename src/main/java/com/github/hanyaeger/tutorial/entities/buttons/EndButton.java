@@ -19,7 +19,7 @@ public class EndButton extends TextEntity implements MouseButtonPressedListener,
     public EndButton(Coordinate2D initialLocation, SpaceInvaders spaceInvaders){
         super(initialLocation,"End Game");
         setFill(Color.BLUEVIOLET);
-        setFont(Font.font("Roboto", FontWeight.BOLD, 40));
+        setFont(Font.font("Roboto", FontWeight.BOLD, 30));
         this.spaceInvaders = spaceInvaders;
     }
 

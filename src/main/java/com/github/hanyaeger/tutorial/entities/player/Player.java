@@ -1,25 +1,33 @@
 package com.github.hanyaeger.tutorial.entities.player;
 
 import com.github.hanyaeger.api.Coordinate2D;
-import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
-import com.github.hanyaeger.api.entities.Newtonian;
-import com.github.hanyaeger.api.entities.SceneBorderTouchingWatcher;
+import com.github.hanyaeger.api.entities.*;
 import com.github.hanyaeger.api.scenes.SceneBorder;
 import com.github.hanyaeger.api.userinput.KeyListener;
+import com.github.hanyaeger.tutorial.SpaceInvaders;
+import com.github.hanyaeger.tutorial.entities.endboss.EndBossBullet;
+import com.github.hanyaeger.tutorial.entities.enemy.Enemy;
+import com.github.hanyaeger.tutorial.entities.enemy.EnemyBullet;
 import com.github.hanyaeger.tutorial.scenes.GameLevel;
 import javafx.scene.input.KeyCode;
 
 import java.util.Set;
 
-public class Player extends DynamicCompositeEntity implements KeyListener, SceneBorderTouchingWatcher, Newtonian {
+public class Player extends DynamicCompositeEntity implements KeyListener, SceneBorderTouchingWatcher, Collided, Collider {
 
     private PlayerSprite playerSprite;
     private GameLevel gameLevel;
+    private SpaceInvaders spaceInvaders;
+    private int healthPoints;
+    private PlayerHealthText healthText;
 
-    public Player(Coordinate2D initialLocation, GameLevel gameLevel) {
+    public Player(Coordinate2D initialLocation, GameLevel gameLevel, SpaceInvaders spaceInvaders, PlayerHealthText healthText) {
         super(initialLocation);
         this.gameLevel = gameLevel;
-        setGravityConstant(0.001);
+        healthPoints = 10;
+        this.spaceInvaders = spaceInvaders;
+        this.healthText = healthText;
+        healthText.setHealthText(healthPoints);
     }
 
     @Override
@@ -27,7 +35,6 @@ public class Player extends DynamicCompositeEntity implements KeyListener, Scene
         playerSprite = new PlayerSprite(new Coordinate2D(0, 0));
         playerSprite.setCurrentFrameIndex(7);
         addEntity(playerSprite);
-        addEntity(new PlayerHitBox(new Coordinate2D(0, 0)));
     }
 
     @Override
@@ -92,5 +99,33 @@ public class Player extends DynamicCompositeEntity implements KeyListener, Scene
             default:
                 break;
         }
+    }
+
+    @Override
+    public void onCollision(Collider collider) {
+//        if(collider instanceof EnemyBullet || collider instanceof EndBossBullet) {
+//            loseHealth();
+//        }
+        if(collider instanceof Enemy e) {
+            e.doDamage(this);
+            loseHealth();
+        }
+    }
+
+    private void loseHealth() {
+//        healthPoints--;
+        healthText.setHealthText(healthPoints);
+
+        if(healthPoints <= 0){
+            spaceInvaders.setActiveScene(3);
+        }
+    }
+
+    public int getHealthPoints() {
+        return healthPoints;
+    }
+
+    public void setHealthPoints(int healthPoints) {
+        this.healthPoints = healthPoints;
     }
 }

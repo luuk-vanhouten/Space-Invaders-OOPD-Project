@@ -21,13 +21,15 @@ public class TitleScene extends StaticScene {
     @Override
     public void setupScene() {
         setBackgroundImage("backgrounds/background3.jpg");
+        setBackgroundAudio("audio/backgroundmusic1.mp3");
+        setBackgroundAudioVolume(0.5);
     }
 
 
     @Override
     public void setupEntities() {
         var spaceInvadersText = new TextEntity(new Coordinate2D(getWidth() / 2, getHeight() / 2.3), "Space Invaders");
-        var startButton = new StartButton(new Coordinate2D(getWidth() / 2, getHeight() / 1.8), spaceInvaders);
+        var startButton = new StartButton(new Coordinate2D(getWidth() / 2, 475), spaceInvaders);
 
         spaceInvadersText.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         spaceInvadersText.setFill(Color.LIGHTSKYBLUE);
